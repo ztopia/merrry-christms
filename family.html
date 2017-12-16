@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>家族</title>
+    <link rel="stylesheet" href="main/family1.css">
+    
+    <script src="main/jquery-3.2.1.min.js"></script>
+    <script src='main/vue.min.js'></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="bg">
+            <p class='topBar'>{{familyId.nick}}家族主播排行榜</p>
+            <div class="bangList">
+                <div class="bangListNav" v-for="(l,index) in family">
+                    <img src="imgs/cgame4.png" alt="">
+                    <img :src="cdn+familyId.faceimg" alt="">
+                   
+                    <img src="imgs/live.png" class='live1' alt="无" v-if="l.islive==1"/>
+                </div>
+                <div class="bangContent">
+                    <div class="top3">
+                        <div class="top3-2">
+                            <p>{{familyId.nick}}家族</p>
+                        </div>
+                    </div>
+                    <div class="familyList">
+                        <ul>
+                            <li v-for="(l,index) in family">
+                                <a :href="'yazhai://_'+l.uid+'_zone'">
+                                   
+                                    <span>{{index+1}}</span>
+                                    <span>
+                                        <img :src="cdn+l.faceimg" class="changciImg" alt="">
+                                        <img src="imgs/live.png" class='live3' alt="无"  v-if="l.islive==1"/>
+                                    </span>
+                                    <span>{{l.nick}}</span>
+                                    
+                                    <span v-if='l.msg==1'>援助{{l.score}}分</span>
+                                    <span v-else>召喚聖誕老人{{l.score}}次</span>
+                                </a>
+                            </li>
+                        </ul>
+    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+</body>
+
+<script src='main/main.js'></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            url: "http://ceshi.yabolive.com/active/christmas/",
+            cdn: "https://zhibocdn.yabolive.net/comm",
+            flist: [],
+            fid: 0,
+            stage: 1,
+            stage1: 1, //one
+            stage2: 2, //two
+            family:[],
+            familyId:{}
+        }
+
+    })
+
+
+    family();
+    familyId();
+
+    console.log(app._data.familyId)
+</script>
+
+</html>

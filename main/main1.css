@@ -1,0 +1,643 @@
+
+@media only screen and (max-width: 2560px), only screen and (max-device-width:2560px) {
+    html,body {
+        font-size:calc(2560px/7.2);
+    }
+}
+
+
+@media only screen and (max-width: 1920px), only screen and (max-device-width:1920px) {
+    html,body {
+        font-size:calc(1920px/7.2);
+    }
+}
+@media only screen and (max-width: 1680px), only screen and (max-device-width:1680px) {
+    html,body {
+        font-size:calc(1680px/7.2);
+    }
+}
+@media only screen and (max-width: 1600px), only screen and (max-device-width:1600px) {
+    html,body {
+        font-size:calc(1600px/7.2);
+    }
+}
+@media only screen and (max-width: 1440px), only screen and (max-device-width:1440px) {
+    html,body {
+        font-size:calc(1440px/7.2);
+    }
+}
+@media only screen and (max-width: 1366px), only screen and (max-device-width:1366px) {
+    html,body {
+        font-size:calc(1366px/7.2);
+    }
+}
+
+@media only screen and (max-width: 1080px), only screen and (max-device-width:1080px) {
+    html,body {
+        font-size:calc(1080px/7.2);
+    }
+  }
+  @media only screen and (max-width: 1024px), only screen and (max-device-width:1024px) {
+    html,body {
+        font-size:calc(1024px/7.2);
+    }
+  }
+    @media only screen and (max-width: 960px), only screen and (max-device-width:960px) {
+    html,body {
+        font-size:calc(960px/7.2);
+    }
+  }
+    @media only screen and (max-width: 800px), only screen and (max-device-width:800px) {
+    html,body {
+        font-size:calc(800px/7.2);
+    }
+  }
+  @media only screen and (max-width: 768px), only screen and (max-device-width:768px) {
+    html,body {
+        font-size:calc(768px/7.2);
+    }
+  }
+    @media only screen and (max-width: 720px), only screen and (max-device-width:720px) {
+    html,body {
+        font-size:100px;
+    }
+  }
+    @media only screen and (max-width: 640px), only screen and (max-device-width:640px) {
+    html,body {
+        font-size:calc(640px/7.2);
+    }
+  }
+    @media only screen and (max-width: 600px), only screen and (max-device-width:600px) {
+    html,body {
+        font-size:calc(600px/7.2);
+    }
+  }
+    @media only screen and (max-width: 540px), only screen and (max-device-width:540px) {
+    html,body {
+        font-size:calc(540px/7.2);
+    }
+  }
+    @media only screen and (max-width: 480px), only screen and (max-device-width:480px) {
+    html,body {
+        font-size:calc(480px/7.2);
+    }
+  }
+    @media only screen and (max-width: 414px), only screen and (max-device-width:414px) {
+    html,body {
+        font-size:calc(414px/7.2);
+    }
+  }
+    @media only screen and (max-width: 400px), only screen and (max-device-width:400px) {
+    html,body {
+        font-size:calc(400px/7.2);
+    }
+  }
+    @media only screen and (max-width: 375px), only screen and (max-device-width:375px) {
+    html,body {
+        font-size:calc(375px/7.2);
+    }
+  }
+    @media only screen and (max-width: 360px), only screen and (max-device-width:360px) {
+    html,body {
+        font-size:calc(360px/7.2);
+    }
+  }
+    @media only screen and (max-width: 320px), only screen and (max-device-width:320px) {
+    html,body {
+        font-size:calc(320px/7.2);
+    }
+  }
+    @media only screen and (max-width: 240px), only screen and (max-device-width:240px) {
+    html,body {
+        font-size:calc(240px/7.2);
+    }
+  }
+  * {
+   padding:0;
+   margin:0;
+}
+
+
+li {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+a,input {
+    -webkit-tap-highlight-color:rgba(255,0,0,0)
+}
+
+body{
+
+   background-color:#f12659;
+}
+
+.poster img{
+   width:7.2rem;
+   height: 31.06rem;
+}
+
+/* 是否在播 */
+.live1 {
+    position: absolute;
+    width:0.5rem;
+    height:0.2rem;
+    left:1.1rem;
+    top:0.6rem;
+    z-index: 3;
+ }
+ 
+ .live2 {
+    position: absolute;
+    width:0.4rem;
+    height:0.18rem;
+    left:0.8rem;
+    top:0.2rem;
+    z-index: 3;
+ }
+ 
+ .live3 {
+     position: absolute;
+     width:0.3rem;
+     height:0.15rem;
+     left:1rem;
+     top:0.7rem;
+     z-index: 3;
+ }
+
+
+ /* 榜单 */
+.bangList {
+   position:relative;
+   margin:1.2rem auto;
+   width:6.4rem;
+   height:7.2rem;
+}
+
+.bangListNav img{
+   position:absolute;
+   width:6.93rem;
+   height:1.29rem;
+   left:-0.3rem;
+   top:-1.1rem;
+}
+
+.bangLeft {
+   width: 2.05rem;
+   height: 0.8rem;
+   position:absolute;
+   left:0.8rem;
+   top:-1.05rem;
+}
+
+.bangRight {
+   width: 2.05rem;
+   height: 0.8rem;
+   position:absolute;
+   top:-1.05rem;
+   left:3.3rem;
+}
+
+.bangContent {
+   background: url("../imgs/bangBorder.png") no-repeat ;
+   width: 6.4rem;
+   height: 7.3rem;
+   background-size:100% 100%;
+}
+
+
+.top3 {
+   width:6.24rem;
+   height:3.85rem;
+   margin:0px auto;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   
+}
+
+.top3Img1 {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin-left: 0.04rem;
+    margin-top: 0.36rem;
+}
+
+.top3Img2 {
+   width: 1.1rem;
+   height: 1.1rem;
+   border-radius: 50%;
+   margin-left: 0.02rem;
+}
+
+.top3-1 {
+   width: 1.59rem;
+   height: 2.07rem;
+   align-self: flex-start;
+   margin-top: 0.15rem;
+   position: relative;
+
+}
+
+.top3-1>a {
+   display: block;
+   width:100%;
+   height:100%;
+   position: relative;
+}
+
+.top3-2,.top3-3 {
+   width: 1.15rem;
+   height: 1.29rem; 
+   position: relative;
+  
+}
+
+.top3-2>a,.top3-3>a {
+   display: block;
+   width:100%;
+   height:100%;
+   position: relative;
+}
+
+.top3-1>a>ul {
+    position: absolute;
+    width:100%;
+    height:80%;
+    bottom: -1.67rem;
+}
+
+.top3-2>a>ul,.top3-3>a>ul {
+    position: absolute;
+    width:100%;
+    height:80%;
+    bottom: -1.01rem;
+}
+
+.top3-2>a>img:nth-of-type(1),.top3-3>a>img:nth-of-type(1),.top3-1>a>img:nth-of-type(1) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.topFont1 {
+   color:#f76b05;
+   font-size:0.2rem;
+   text-align: center;
+  
+}
+
+.topFont2 {
+   color:#d12806;
+   font-size:0.14rem;
+   text-align: center;
+  
+} 
+
+.top3More {
+   width:6.24rem;
+   height:3.36rem;
+}
+
+.top3More ul {
+   width:100%;
+   height:100%;
+   overflow: auto;
+}
+
+.top3More>ul>li {
+   width:91%;
+   height:33%;
+   border-top: 1px solid #d0cfd8;
+   margin:0 auto;
+  
+}
+
+.top3More>ul>li>a {
+   width:100%;
+   height:100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   position: relative;
+}
+
+.top3More>ul>li>a>span {
+   padding:0 0.15rem;
+   font-size: 0.24rem;
+   color:#da735f;
+   
+}
+
+.changciImg {
+   width: 0.6rem;
+   height: 0.6rem;
+   border-radius: 50%;
+   border:1px solid orange;
+}
+.top3More ul li span:nth-of-type(3) {
+   flex:1;
+}
+
+
+
+.one {
+   margin-top:0.2rem;
+}
+
+.second {
+   margin-top:1.2rem;
+}
+
+.third {
+   margin-top: 1.2rem;
+}
+
+.changci {
+   background:url("../imgs/bangBorder.png");
+   width: 6.4rem;
+   height: 7.3rem;
+   margin:0 auto;
+   position:relative;
+   background-size:100% 100%;
+}
+
+.topBar {
+   position:absolute;
+   top:-0.9rem;
+   left:-0.3rem;
+}
+
+.topBar img{
+   width: 6.93rem;
+   height: 1.29rem;
+}
+
+.changci ul {
+   width:100%;
+   height: 6.7rem;
+   overflow: auto;
+   position: absolute;
+   top:0.5rem;
+}
+
+.changci>ul>li {
+   width:91%;
+   height:15%;
+   border-top: 1px solid #d0cfd8;
+   margin:0 auto;
+  
+}
+
+.changci>ul>li>a {
+   width:100%;
+   height:100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.changci>ul>li>a>span {
+   padding:0 0.15rem;
+   font-size: 0.24rem;
+   color:#da735f;
+   
+}
+
+.changciImg {
+   width: 0.6rem;
+   height: 0.6rem;
+   border-radius: 50%;
+   border:1px solid orange;
+}
+.changci ul li span:nth-of-type(3) {
+   flex:1;
+}
+
+
+/* 锚定位 */
+
+
+.pot {
+    position: fixed;
+    top:4.2rem;
+    right:0;
+    z-index: 5;
+    background:url("../imgs/pot.png");
+    background-size: 100% 100%;
+    height:2rem;
+    width:1rem;
+}
+
+.ruler1 {
+    position: absolute;
+    top:6rem;
+}
+
+.bangdan1 {
+    position: absolute;
+    top:31rem;
+}
+
+.pot #ruler {
+   
+    margin-top:3rem;
+
+}
+
+.pot #bangdan {
+    
+    margin-top:4rem;
+    
+}
+
+.aDiv {
+    width: 1rem;
+    height: 0.4rem;
+    
+}
+
+
+.aDiv1 {
+    width: 1rem;
+    height: 0.4rem;
+   
+    margin-top:1.2rem;
+}
+
+.none {
+    display:none;
+}
+
+/* 锚定位 over*/
+
+.changci-3 {
+   background:url("../imgs/bangBorder.png");
+   width: 6.4rem;
+   height:9.63rem;
+   margin:0 auto;
+   position:relative;
+   background-size:100% 100%;
+}
+
+.combatList {
+    width: 100%;
+    height:100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.combat1 {
+    width:35%;
+    height:95%;
+    position: relative;
+}
+
+.vs {
+    width:20%;
+    height:95%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.combat2 {
+    width:35%;
+    height:95%;
+    position: relative;
+}
+
+.combat1>li {
+    width:100%;
+    height:20%;
+    position: relative;
+}
+
+.combat1>li>a {
+    display: block;
+    width:100%;
+    height:100%;
+}
+
+.combat1>li>a>img {
+    border:1px solid orange;
+    border-radius: 50%;
+    width: 1rem;
+    height:1rem;
+    position: absolute;
+    left:50%;
+    margin-left: -0.5rem;
+    top:0.1rem;
+}
+
+.combat1>li>a>ul {
+    position: relative;
+    width:100%;
+    height:30%;
+    top:1.2rem;
+
+}
+
+.combat1>li>a>ul>li:nth-of-type(1) {
+    font-size: 0.2rem;
+    color: orangered;
+    text-align: center;
+}
+
+.combat1>li>a>ul>li:nth-of-type(2) {
+    font-size: 0.16rem;
+    color: orange;
+    text-align: center;
+}
+
+.combat2>li {
+    width:100%;
+    height:20%;
+    position: relative;
+}
+
+.combat2>li>a {
+    display: block;
+    width:100%;
+    height:100%;
+}
+
+.combat2>li>a>img {
+    border:1px solid orange;
+    border-radius: 50%;
+    width: 1rem;
+    height:1rem;
+    position: absolute;
+    left:50%;
+    margin-left: -0.5rem;
+    top:0.1rem;
+}
+
+.combat2>li>a>ul {
+    position: relative;
+    width:100%;
+    height:30%;
+    top:1.2rem;
+
+}
+
+.combat2>li>a>ul>li:nth-of-type(1) {
+    font-size: 0.2rem;
+    color: orangered;
+    text-align: center;
+}
+
+.combat2>li>a>ul>li:nth-of-type(2) {
+    font-size: 0.16rem;
+    color: orange;
+    text-align: center;
+}
+
+.vs>img {
+    width:1rem;
+    height:0.6rem;
+}
+
+/* 三场结束样式 */
+.victory1 {
+    position: absolute;
+    width:1.5rem;
+    height:0.8rem;
+    z-index: 5;
+    top:0.5rem;
+}
+
+.victory2 {
+    position: absolute;
+    width:1.5rem;
+    height:0.8rem;
+    z-index: 5;
+    right:-0.1rem;
+    top:0.5rem;
+}
+
+.desaturate {
+    filter: grayscale(100%);
+}
+
+.black {
+    color:black;
+}
+
+.gray {
+    color:#ccc;
+ }
+
+
+
+
+
+
+

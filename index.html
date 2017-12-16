@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="wap-font-scale" content="no">
+    <!-- 首页 -->
+    <title>聖誕狂歡</title>
+
+    <link rel="stylesheet" href="main/main1.css">
+
+    <script src="main/jquery-3.2.1.min.js"></script>
+
+    <script src="main/vue.min.js"></script>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <div class='pot'>
+            <a href="#bangdan" class="bangdan">
+                <div class="aDiv1"></div>
+            </a>
+            <a href="#ruler" class="ruler">
+                <div class="aDiv"></div>
+            </a>
+
+        </div>
+        <a name="ruler" class="ruler1" javascript='return false'></a>
+
+        <div class="poster">
+            <img src="imgs/bg1.jpg" alt="">
+        </div>
+        <a name="bangdan" class="bangdan1" javascript='return false'></a>
+        <div class="bangList">
+            <div class="bangListNav">
+                <img src="imgs/ctitle1.png" alt="">
+                <div class="bangLeft"></div>
+                <div class="bangRight"></div>
+            </div>
+            <div class="bangContent">
+                <div class="top3">
+                    <div class="top3-2" v-for="(l,index) in flist" v-if="index==1">
+                        <a :href="'yazhai://_'+l.uid+'_zone'">
+                            <img src="imgs/christwo.png" alt="">
+                            <img :src="cdn+l.faceimg" class="top3Img2" alt="">
+                            <img src="imgs/live.png" class='live2' alt="无" v-if="l.islive==1" />
+                            <ul>
+                                <li class='topFont1'>{{l.nick}}</li>
+                                <li class='topFont2' v-if='l.msg==1'>召喚{{l.score}}次</li>
+                                <li class='topFont2' v-if='l.msg==2'>援助{{l.score}}分</li>
+                            </ul>
+                        </a>
+
+                    </div>
+                    <div class="top3-1" v-for="(l,index) in flist" v-if="index==0">
+                        <a :href="'yazhai://_'+l.uid+'_zone'">
+                            <img src="imgs/chrisone.png" alt="">
+                            <img :src="cdn+l.faceimg" class="top3Img1" alt="">
+                            <img src="imgs/live.png" class='live1' alt="无" v-if="l.islive==1" />
+                            <ul>
+                                <li class='topFont1'>{{l.nick}}</li>
+                                <li class='topFont2' v-if='l.msg==1'>召喚{{l.score}}次</li>
+                                <li class='topFont2' v-if='l.msg==2'>援助{{l.score}}分</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="top3-3" v-for="(l,index) in flist" v-if="index==2">
+                        <a :href="'yazhai://_'+l.uid+'_zone'">
+                            <img src="imgs/christhree.png" alt="">
+                            <img :src="cdn+l.faceimg" class="top3Img2" alt="">
+                            <img src="imgs/live.png" class='live2' alt="无" v-if="l.islive==1" />
+                            <ul>
+                                <li class='topFont1'>{{l.nick}}</li>
+                                <li class='topFont2' v-if='l.msg==1'>召喚{{l.score}}次</li>
+                                <li class='topFont2' v-if='l.msg==2'>援助{{l.score}}分</li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+                <div class="top3More">
+                    <ul>
+                        <li v-for="(l,index) in flist" v-if="index>2">
+                            <a :href="'yazhai://_'+l.uid+'_zone'">
+                                <span>{{index+1}}</span>
+                                <span>
+
+                                    <img :src="cdn+l.faceimg" class="changciImg" alt="">
+                                    <img src="imgs/live.png" class='live3' alt="无" v-if="l.islive==1" />
+                                </span>
+                                <span>{{l.nick}}</span>
+                                <span v-if='l.msg==1'>召喚聖誕老人{{l.score}}次</span>
+                                <span v-if='l.msg==2'>援助{{l.score}}分</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div :class="stageTime==1 ? 'one':'one none'">
+            <div class="changci">
+                <div class="topBar">
+                    <img src="imgs/cgame1.png" alt="">
+                </div>
+                <ul>
+                    <li v-for="(l,index) in fone">
+                        <a :href="'family.html?'+l.uid">
+                            <span>{{index+1}}</span>
+                            <span>
+                                <img :src="cdn+l.faceimg" class="changciImg" alt="">
+                            </span>
+                            <span>{{l.nick}}</span>
+                            <span>召喚聖誕老人{{l.score}}次</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div :class="stageTime==2 ? 'second':'second none'">
+            <div class="changci">
+                <div class="topBar">
+                    <img src="imgs/cgame2.png" alt="">
+                </div>
+                <ul>
+                    <li v-for="(l,index) in ftwo">
+                        <a :href="'family.html?'+l.uid">
+                            <span>{{index+1}}</span>
+                            <span>
+                                <img :src="cdn+l.faceimg" class="changciImg" alt="">
+                            </span>
+                            <span>{{l.nick}}</span>
+                            <span>召喚聖誕老人{{l.score}}次</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div :class="stageTime==3 ? 'third':'third none'">
+            <div class="changci-3">
+                <div class="topBar">
+                    <img src="imgs/cgame3.png" alt="">
+                </div>
+
+                <div class="combatList">
+                    <ul class="combat1">
+                        <li v-for="(l,index) in fthree1">
+                            <a :href="'family.html?'+l.uid">
+                                <img :src="cdn+l.faceimg" alt="">
+                                <ul>
+                                    <li>{{l.nick}}</li>
+                                    <li>（積分{{l.score}}分）</li>
+                                </ul>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <ul class="vs">
+                        <img src="imgs/icon_vs.png" alt="">
+                        <img src="imgs/icon_vs.png" alt="">
+                        <img src="imgs/icon_vs.png" alt="">
+                        <img src="imgs/icon_vs.png" alt="">
+                        <img src="imgs/icon_vs.png" alt="">
+                    </ul>
+                    <ul class="combat2">
+                        <li v-for="(l,index) in fthree2">
+                            <a :href="'family.html?'+l.uid">
+                                <img :src="cdn+l.faceimg" alt="">
+                                <ul>
+                                    <li>{{l.nick}}</li>
+                                    <li>（積分{{l.score}}分）</li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div :class="stageTime==4 ? 'third':'third none'">
+            <div class="changci-3">
+                <div class="topBar">
+                    <img src="imgs/cgame3.png" alt="">
+                </div>
+                <div class="combatList">
+                    <ul class="combat1">
+                        <li v-for="(l,index) in fthree1">
+                            <img src="imgs/victory.png" class='victory1' v-if='l.mark==1'>
+                            <a :href="'family.html?'+l.uid">
+                                <img :src="cdn+l.faceimg" :class="l.mark==1 ? '':'desaturate'">
+                                <ul>
+                                    <li>
+                                        <span :class="l.mark==1 ? '':'black'">{{l.nick}}</span>
+                                    </li>
+                                    <li>
+                                        <span :class="l.mark==1 ? '':'gray'">（積分{{l.score}}分）</span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <ul class="vs">
+                        <img src="imgs/icon_vs.png" alt="">
+                        <img src="imgs/icon_vs.png" alt="">
+                        <img src="imgs/icon_vs.png" alt="">
+                        <img src="imgs/icon_vs.png" alt="">
+                        <img src="imgs/icon_vs.png" alt="">
+                    </ul>
+                    <ul class="combat2">
+                        <li v-for="(l,index) in fthree2">
+                            <img src="imgs/victory.png" class='victory2' v-if='l.mark==1'>
+                            <a :href="'family.html?'+l.uid">
+                                <img :src="cdn+l.faceimg" :class="l.mark==1 ? '':'desaturate'">
+                                <ul>
+                                    <li>
+                                        <span :class="l.mark==1 ? '':'black'">{{l.nick}}</span>
+                                    </li>
+                                    <li>
+                                        <span :class="l.mark==1 ? '':'gray'">（積分{{l.score}}分）</span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+<script src='main/main.js'></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            url: "http://ceshi.yabolive.com/active/christmas/",
+            cdn: "https://zhibocdn.yabolive.net/comm",
+            flist: [],
+            stage: 1, //援助 or 召唤控制
+            fone: [], //第一阶段数据
+            ftwo: [], //第二阶段数据
+            fthree1: [], //第三阶段第一队数据
+            fthree2: [], //第三阶段第二队数据
+            stage1: 1, //one  
+            stage2: 2, //two
+            stageTime: 1, //版本控制（隐藏div）
+
+
+        }
+    })
+
+
+
+    //-----------------------bangList-------------------------------
+
+
+    var bangListImg = $(".bangListNav>img");
+
+    $(".bangLeft").click(function () {
+        bangListImg.attr('src', 'imgs/ctitle1.png');
+        // console.log(app._data.stage);
+        app._data.stage = '1';
+        getBigMovieStagelist(app._data.stage)
+        console.log(app._data.stage)
+
+    })
+
+    $(".bangRight").click(function () {
+        bangListImg.attr('src', 'imgs/ctitle2.png');
+        app._data.stage = '2';
+        getBigMovieStagelist(app._data.stage)
+        console.log(app._data.stage)
+
+    })
+
+    getBigMovieStagelist(app._data.stage)
+
+    getOne(app._data.stage1);
+
+    getTwo(app._data.stage2);
+
+    rank3one(app._data.stage1); //第一支队伍
+    rank3two(app._data.stage2); //第二支队五
+
+    stateTime();
+
+
+    //-----------------------bangList over-------------------------------
+</script>
+
+
+
+</html>
